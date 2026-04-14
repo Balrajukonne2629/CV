@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAGE SETUP
+       → Edit <title> tag and meta description here
+  ════════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balraju Konne — MERN Stack Developer</title>
+  <meta name="description" content="Portfolio of Balraju Konne, B.Tech IT student at CBIT, Hyderabad. MERN Stack Developer." />
+
+  <!-- ═══════════════════════════════════════════════════════
+       FONTS
+       → Bricolage Grotesque (headings) + DM Sans (body)
+  ════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       STYLESHEET  →  All visual styling lives in style.css
+  ════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+
+  <!-- SCROLL PROGRESS BAR ── thin glowing line at top of screen -->
+  <div id="pb"></div>
+
+  <!-- CUSTOM CURSOR ── dot + trailing ring -->
+  <div class="cr" id="cr"></div>
+  <div class="ct" id="ct"></div>
+
+  <!-- AURORA BLOBS ── 3 drifting color blobs behind everything -->
+  <div class="aurora">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: NAV
+       → Floating pill navbar
+       EDIT: Add/remove links in <ul>, update email on .nav-cta
+  ════════════════════════════════════════════════════════ -->
+  <nav>
+    <a href="#hero" class="nav-logo">BK.</a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#achievements">Wins</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+
+    <a href="mailto:balrajukonne@gmail.com" class="nav-cta">Let's Talk →</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: HERO
+       ─────────────────────────────────────────────────────
+       WHERE TO EDIT WHAT:
+       • Status chip text  → <span> after .chip-dot
+       • Your name         → "Balraju" and "Konne" in .hero-name
+       • Role subtitle     → <strong> + rest of .hero-role
+       • Bio paragraph     → .hero-bio <p>
+       • CTA buttons       → href and text in .hero-acts
+       ─────────────────────────────────────────────────────
+       FLOATING BADGES (bottom-right):
+       • CGPA    → <span class="n">8.58</span>   ← UPDATE HERE
+       • LeetCode→ <span class="n">100+</span>
+       • Projects→ <span class="n">3</span>
+  ════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-in">
+
+      <!-- Status chip -->
+      <div class="hero-chip">
+        <span class="chip-dot"></span>
+        <span>B.Tech IT · CBIT · 2024–2028 · CGPA 8.37</span>
+                                    <!-- ↑ Update CGPA here too -->
+      </div>
+
+      <!-- Name -->
+      <h1 class="hero-name">
+        Balraju
+        <span class="name-last">Konne</span>
+      </h1>
+
+      <!-- Role tagline -->
+      <p class="hero-role">
+        <strong>MERN Stack Developer</strong> — building for the web,<br />
+        learning DSA, shipping real products.
+      </p>
+
+      <!-- Bio -->
+      <p class="hero-bio">
+        I'm a CS student who actually builds things. From full-stack event planners
+        to data analysis pipelines — I write code that works, then make it better.
+        Currently deep in the MERN stack while grinding LeetCode every day.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-acts">
+        <a href="#projects" class="btn btn-p">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          See My Work
+        </a>
+        <a href="https://github.com/Balrajukonne2629" target="_blank" rel="noopener" class="btn btn-o">
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://leetcode.com/u/balrajukonne" target="_blank" rel="noopener" class="btn btn-o">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0z"/></svg>
+          LeetCode
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Floating stat badges — bottom right -->
+    <div class="hero-badges">
+      <div class="mbadge"><span class="n">8.58</span><span>CGPA / 10</span></div>        <!-- ← UPDATE CGPA -->
+      <div class="mbadge"><span class="n">100+</span><span>LeetCode Problems</span></div>
+      <div class="mbadge"><span class="n">3</span><span>Projects Shipped</span></div>
+    </div>
+
+  </section>
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: ABOUT
+       ─────────────────────────────────────────────────────
+       WHERE TO EDIT WHAT:
+       • Bio text   → the 3 <p> tags inside .about-text
+       • CGPA card  → <div class="sv">8.58</div>   ← UPDATE HERE
+       • LeetCode   → <div class="sv">100+</div>
+       • Projects   → <div class="sv">3</div>
+       • Certs      → <div class="sv">4+</div>
+  ════════════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="eyebrow">Who I Am</div>
+    <h2 class="sh sr">Curious by default.<br /><span class="gt">Builder by choice.</span></h2>
+
+    <div class="ag">
+
+      <!-- Left column: Bio paragraphs -->
+      <div class="about-text sr">
+        <p>
+          I'm <strong>Balraju Konne</strong> — a B.Tech IT student at <strong>CBIT, Hyderabad</strong>
+          with a genuine obsession for building software. I don't just study code. I ship it.
+        </p>
+        <p>
+          Right now I'm deep in the <em>MERN stack</em> — MongoDB, Express.js, React, Node.js —
+          building full-stack web apps while maintaining a strong DSA practice on
+          <em>LeetCode</em> (100+ problems). I believe both sides matter: design systems well
+          <strong>and</strong> solve problems efficiently.
+        </p>
+        <p>
+          From Student Coordinator at <strong>Sudhee 2025</strong> to a
+          <strong>Hacktoberfest participant</strong> — I thrive in environments that push me.
+          Ask me about my Event Budget Planner or Python data analysis project. I wrote every line.
+        </p>
+      </div>
+
+      <!-- Right column: Stat cards -->
+      <div class="acards sr">
+
+        <div class="scard glass">
+          <div class="iw">🎓</div>
+          <div>
+            <div class="sv">8.37</div>  <!-- ← UPDATE CGPA HERE -->
+            <div class="sd">CGPA at CBIT — B.Tech IT</div>
+          </div>
+        </div>
+
+        <div class="scard glass">
+          <div class="iw">⚡</div>
+          <div>
+            <div class="sv">100+</div>  <!-- ← Update LeetCode count -->
+            <div class="sd">LeetCode problems solved</div>
+          </div>
+        </div>
+
+        <div class="scard glass">
+          <div class="iw">🚀</div>
+          <div>
+            <div class="sv">3</div>     <!-- ← Update project count -->
+            <div class="sd">Full projects on GitHub</div>
+          </div>
+        </div>
+
+        <div class="scard glass">
+          <div class="iw">🏅</div>
+          <div>
+            <div class="sv">5+</div>    <!-- ← Update cert count -->
+            <div class="sd">Industry certifications</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: SKILLS
+       ─────────────────────────────────────────────────────
+       WHERE TO EDIT WHAT:
+       • Add skill    → add <span class="pill">SkillName</span> in the right row
+       • Highlight    → use <span class="pill f">SkillName</span>  (f = featured/cyan)
+       • Remove       → delete the <span class="pill"> line
+       • New row      → copy a full .sk-row block, change .sk-lbl and pills
+  ════════════════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="eyebrow">Tech Stack</div>
+    <h2 class="sh sr">What I work with.</h2>
+
+    <div class="sl">
+
+      <!-- SKILLS ROW: Languages -->
+      <div class="sk-row glass sr">
+        <div class="sk-lbl">Languages</div>
+        <div class="pills">
+          <span class="pill f">Java</span>
+          <span class="pill f">JavaScript</span>
+          <span class="pill f">Python</span>
+          <span class="pill">C</span>
+          <span class="pill">C++</span>
+        </div>
+      </div>
+
+      <!-- SKILLS ROW: MERN Stack & Web -->
+      <div class="sk-row glass sr">
+        <div class="sk-lbl">MERN Stack &amp; Web</div>
+        <div class="pills">
+          <span class="pill f">React</span>
+          <span class="pill f">Node.js</span>
+          <span class="pill f">Express.js</span>
+          <span class="pill f">MongoDB</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">HTML5</span>
+          <span class="pill">CSS3</span>
+        </div>
+      </div>
+
+      <!-- SKILLS ROW: CS Concepts -->
+      <div class="sk-row glass sr">
+        <div class="sk-lbl">CS Concepts</div>
+        <div class="pills">
+          <span class="pill f">Data Structures &amp; Algorithms</span>
+          <span class="pill">Object-Oriented Programming</span>
+          <span class="pill">DBMS</span>
+          <span class="pill">Web Development</span>
+        </div>
+      </div>
+
+      <!-- SKILLS ROW: Tools -->
+      <div class="sk-row glass sr">
+        <div class="sk-lbl">Tools</div>
+        <div class="pills">
+          <span class="pill">Git</span>
+          <span class="pill">GitHub</span>
+          <span class="pill">VS Code</span>
+          <span class="pill">Java Servlets</span>
+          <span class="pill">JSP</span>
+          <span class="pill">Pandas</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: PROJECTS
+       ─────────────────────────────────────────────────────
+       WHERE TO EDIT WHAT:
+       • Project name     → .pname
+       • Short description→ .pdesc
+       • Bullet points    → each <li> inside .pbulls
+       • Tech tags        → each .ptag inside .ptags
+       • GitHub link      → href on the .plnk anchor tag
+       • Add a project    → copy a PROJECT CARD block, paste after last one, change pnum to 04
+  ════════════════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="eyebrow">Work</div>
+    <h2 class="sh sr">Things I've built <span class="gt">&amp; shipped.</span></h2>
+
+    <div class="pg">
+
+      <!-- ─── PROJECT CARD 01 ─────────────────────────── -->
+      <div class="pcard glass sr">
+        <div class="phdr">
+          <span class="pnum">01 / Featured</span>
+          <div class="plnks">
+            <a href="https://github.com/Balrajukonne2629/event-budget-planner" target="_blank" rel="noopener" class="plnk" title="GitHub">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="pname">Event Budget Planner</div>
+        <p class="pdesc">Full-stack MERN app to plan events, estimate budgets, and manage guest details end-to-end.</p>
+        <ul class="pbulls">
+          <li>REST APIs with Node.js + Express for event &amp; guest CRUD operations</li>
+          <li>MongoDB for persistent storage across sessions</li>
+          <li>React frontend with real-time budget calculation</li>
+        </ul>
+        <div class="ptags">
+          <span class="ptag">React</span>
+          <span class="ptag">Node.js</span>
+          <span class="ptag">Express</span>
+          <span class="ptag">MongoDB</span>
+        </div>
+      </div>
+      <!-- ─── END PROJECT CARD 01 ────────────────────── -->
+
+      <!-- ─── PROJECT CARD 02 ─────────────────────────── -->
+      <div class="pcard glass sr">
+        <div class="phdr">
+          <span class="pnum">02</span>
+          <div class="plnks">
+            <a href="https://github.com/Balrajukonne2629/PortfolioGenerator" target="_blank" rel="noopener" class="plnk" title="GitHub">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="pname">Portfolio Generator</div>
+        <p class="pdesc">Dynamic web app that auto-generates styled portfolio pages from user inputs using server-side Java.</p>
+        <ul class="pbulls">
+          <li>Server-side rendering with Java Servlets and JSP</li>
+          <li>Custom form handling and templating logic</li>
+          <li>Clean responsive output pages</li>
+        </ul>
+        <div class="ptags">
+          <span class="ptag">Java</span>
+          <span class="ptag">Servlets</span>
+          <span class="ptag">JSP</span>
+        </div>
+      </div>
+      <!-- ─── END PROJECT CARD 02 ────────────────────── -->
+
+      <!-- ─── PROJECT CARD 03 ─────────────────────────── -->
+      <div class="pcard glass sr">
+        <div class="phdr">
+          <span class="pnum">03</span>
+          <div class="plnks">
+            <a href="https://github.com/Balrajukonne2629/EDAV_Project" target="_blank" rel="noopener" class="plnk" title="GitHub">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="pname">Recipe Popularity Analysis</div>
+        <p class="pdesc">EDA project studying what makes recipes popular — ratings, prep time, and complexity as variables.</p>
+        <ul class="pbulls">
+          <li>Data wrangling and analysis using Pandas</li>
+          <li>Statistical exploration of recipe dataset patterns</li>
+          <li>Visualisations to surface trends and correlations</li>
+        </ul>
+        <div class="ptags">
+          <span class="ptag">Python</span>
+          <span class="ptag">Pandas</span>
+          <span class="ptag">Data Analysis</span>
+        </div>
+      </div>
+      <!-- ─── END PROJECT CARD 03 ────────────────────── -->
+
+    </div>
+  </section>
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: ACHIEVEMENTS
+       ─────────────────────────────────────────────────────
+       WHERE TO EDIT WHAT:
+       • Title       → .atit
+       • Description → .asub
+       • Emoji       → .aicon
+       • Add new     → copy any .acard block and paste inside .ag2
+  ════════════════════════════════════════════════════════ -->
+  <section id="achievements">
+    <div class="eyebrow">Highlights</div>
+    <h2 class="sh sr">Things I'm <span class="gt">proud of.</span></h2>
+
+    <div class="ag2">
+
+      <div class="acard glass sr">
+        <div class="aicon">🔥</div>
+        <div>
+          <div class="atit">50 Days LeetCode Badge</div>
+          <div class="asub">Earned in 2025 for consistent daily practice. 100+ problems across arrays, hashing, strings, recursion &amp; sorting.</div>
+        </div>
+      </div>
+
+      <div class="acard glass sr">
+        <div class="aicon">🌐</div>
+        <div>
+          <div class="atit">Hacktoberfest 2025</div>
+          <div class="asub">Participated in Hacktoberfest2025 Hackathon conducted by CBIT — open source &amp; collaboration.</div>
+        </div>
+      </div>
+
+      <div class="acard glass sr">
+        <div class="aicon">🎙️</div>
+        <div>
+          <div class="atit">Student Coordinator — Sudhee 2025</div>
+          <div class="asub">Served as coordinator for a technical event at CBIT's annual tech fest, managing participants &amp; logistics.</div>
+        </div>
+      </div>
+
+      <div class="acard glass sr">
+        <div class="aicon">☁️</div>
+        <div>
+          <div class="atit">Oracle Cloud AI Certified</div>
+          <div class="asub">OCI 2025 AI Foundations Associate. Also certified via GUVI &amp; NPTEL Python programs.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: EDUCATION
+       ─────────────────────────────────────────────────────
+       WHERE TO EDIT WHAT:
+       • CGPA          → <span class="hl">CGPA: 8.58 / 10</span>   ← UPDATE HERE
+       • 12th score    → <span class="hl">96%</span>
+       • Year range    → .ebadge text
+       • College name  → .eschool text
+       • Add new entry → copy any .eentry block and paste inside .etrack
+  ════════════════════════════════════════════════════════ -->
+  <section id="education">
+    <div class="eyebrow">Background</div>
+    <h2 class="sh sr">Where I come from.</h2>
+
+    <div class="etrack">
+
+      <!-- EDUCATION: B.Tech ──────────────────────────── -->
+      <div class="eentry">
+        <div class="ebadge">2024 — 2028</div>
+        <div class="eschool">Chaitanya Bharathi Institute of Technology (CBIT)</div>
+        <div class="edet">
+          B.E – Information Technology &nbsp;·&nbsp;
+          <span class="hl">CGPA: 8.37 / 10</span>  <!-- ← UPDATE CGPA HERE -->
+          &nbsp;·&nbsp; Hyderabad, Telangana
+        </div>
+      </div>
+
+      <!-- EDUCATION: Intermediate ────────────────────── -->
+      <div class="eentry">
+        <div class="ebadge">2022 — 2024</div>
+        <div class="eschool">Telangana Social Welfare Residential Junior College</div>
+        <div class="edet">
+          Intermediate · MPC &nbsp;·&nbsp;
+          <span class="hl">96%</span>               <!-- ← Update if needed -->
+          &nbsp;·&nbsp; Gowlidoddi
+        </div>
+      </div>
+
+      <!-- EDUCATION: School ──────────────────────────── -->
+      <div class="eentry">
+        <div class="ebadge">2018 — 2022</div>
+        <div class="eschool">Jawahar Navodaya Vidyalaya (JNV)</div>
+        <div class="edet">Secondary School &nbsp;·&nbsp; Wargal, Medak District</div>
+      </div>
+
+    </div>
+  </section>
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: CERTIFICATIONS
+       ─────────────────────────────────────────────────────
+       WHERE TO EDIT WHAT:
+       • Issuer  → .ciss  (shown in gold)
+       • Name    → .cname
+       • Status  → .ccheck  (default: "✓ Verified")
+       • Add new → copy any .citem block and paste inside .cg
+  ════════════════════════════════════════════════════════ -->
+  <section id="certifications">
+    <div class="eyebrow">Credentials</div>
+    <h2 class="sh sr">Certified &amp; <span class="gt">still learning.</span></h2>
+
+    <div class="cg">
+
+      <div class="citem glass sr">
+        <div class="ciss">Oracle</div>
+        <div class="cname">Oracle Cloud Infrastructure 2025 — AI Foundations Associate</div>
+        <div class="ccheck">✓ Verified</div>
+      </div>
+
+      <div class="citem glass sr">
+        <div class="ciss">HCL</div>
+        <div class="cname">AI Impact Summit Buildathon</div>
+        <div class="ccheck">✓ Verified</div>
+      </div>
+      
+      <div class="citem glass sr">
+        <div class="ciss">Saylor University</div>
+        <div class="cname">PRDV401:Introduction to JavaScript I</div>
+        <div class="ccheck">✓ Verified</div>
+      </div>
+
+      <div class="citem glass sr">
+        <div class="ciss">GUVI</div>
+        <div class="cname">Foundations of Programming with Python</div>
+        <div class="ccheck">✓ Verified</div>
+      </div>
+
+      <div class="citem glass sr">
+        <div class="ciss">NPTEL / IIT</div>
+        <div class="cname">Programming, Data Structures &amp; Algorithms using Python</div>
+        <div class="ccheck">✓ Verified</div>
+      </div>
+
+    </div>
+  </section>
+  <div class="divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       SECTION: CONTACT
+       ─────────────────────────────────────────────────────
+       • Email   → href="mailto:..." and .cval text on Email row
+       • LinkedIn→ href on LinkedIn row
+       • GitHub  → href on GitHub row
+       • LeetCode→ href on LeetCode row
+       • Phone   → href="tel:..." and .cval text on Phone row
+       • Add row → copy any .crow block and paste inside .clinks
+  ════════════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="eyebrow">Get In Touch</div>
+    <h2 class="sh sr" style="text-align: center;">
+      Open to internships,<br />
+      <span class="gt">collabs &amp; cool problems.</span>
+    </h2>
+
+    <div class="ccard glass sr">
+      <p class="ctag">Let's build something together.</p>
+      <p class="csub">Whether you have an internship opportunity, a project idea, or just want to connect — my inbox is always open.</p>
+
+      <div class="clinks">
+
+        <!-- Email -->
+        <a href="mailto:balrajukonne@gmail.com" class="crow">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          <span class="clbl">Email</span>
+          <span class="cval">balrajukonne@gmail.com</span>
+          <span class="carr">→</span>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/balrajukonne-319247348" target="_blank" rel="noopener" class="crow">
+          <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="clbl">LinkedIn</span>
+          <span class="cval">balrajukonne-319247348</span>
+          <span class="carr">→</span>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/Balrajukonne2629" target="_blank" rel="noopener" class="crow">
+          <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          <span class="clbl">GitHub</span>
+          <span class="cval">Balrajukonne2629</span>
+          <span class="carr">→</span>
+        </a>
+
+        <!-- LeetCode -->
+        <a href="https://leetcode.com/u/balrajukonne" target="_blank" rel="noopener" class="crow">
+          <svg width="17" height="17" fill="currentColor" viewBox="0 0 24 24"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0z"/></svg>
+          <span class="clbl">LeetCode</span>
+          <span class="cval">balrajukonne</span>
+          <span class="carr">→</span>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:6300361060" class="crow">
+          <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.09 6.09l1.08-.82a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="clbl">Phone</span>
+          <span class="cval">+91 6300361060</span>
+          <span class="carr">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+       → Edit your name, college, and year here
+  ════════════════════════════════════════════════════════ -->
+  <footer>
+    <p>Designed &amp; coded by <strong>Balraju Konne</strong></p>
+    <span>CBIT · B.Tech IT · Hyderabad</span>
+    <span>© 2026</span>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+                         JAVASCRIPT
+       → Handles: scroll bar, cursor, reveal animations, stagger delays
+  ════════════════════════════════════════════════════════ -->
+  <script>
+
+    // Scroll progress bar
+    const pb = document.getElementById('pb');
+    window.addEventListener('scroll', () => {
+      const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      pb.style.width = pct + '%';
+    });
+
+    // Custom cursor — dot follows instantly, ring lags behind
+    const cr = document.getElementById('cr');
+    const ct = document.getElementById('ct');
+    let mx = 0, my = 0, tx = 0, ty = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      cr.style.left = mx + 'px';
+      cr.style.top  = my + 'px';
+    });
+
+    (function loop() {
+      tx += (mx - tx) * 0.1;
+      ty += (my - ty) * 0.1;
+      ct.style.left = tx + 'px';
+      ct.style.top  = ty + 'px';
+      requestAnimationFrame(loop);
+    })();
+
+    document.querySelectorAll('a, button, .glass').forEach(el => {
+      el.addEventListener('mouseenter', () => { cr.style.width = '14px'; cr.style.height = '14px'; ct.style.width = '44px'; ct.style.height = '44px'; });
+      el.addEventListener('mouseleave', () => { cr.style.width = '8px';  cr.style.height = '8px';  ct.style.width = '32px'; ct.style.height = '32px'; });
+    });
+
+    // Scroll reveal — adds class 'vis' when element enters viewport
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.sr, .eentry').forEach(el => io.observe(el));
+
+    // Stagger entrance delays
+    ['.sk-row', '.pcard', '.acard', '.citem', '.scard'].forEach(sel => {
+      document.querySelectorAll(sel).forEach((el, i) => { el.style.transitionDelay = `${i * 0.08}s`; });
+    });
+
+    document.querySelectorAll('.eentry').forEach((el, i) => { el.style.transitionDelay = `${i * 0.12}s`; });
+
+  </script>
+
+</body>
+</html>
