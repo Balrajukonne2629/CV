@@ -1,0 +1,53 @@
+body{
+    background-color: rgba(184, 225, 205, 0.873);
+
+ hr{
+    background-color:rgba(184, 225, 205, 0.873);
+    height: 0px;
+    width: 5%;
+    border-width: 10px;
+    border-color: wheat;
+    border-style: dotted none none ;    
+}
+h1{
+    color: rgb(88, 195, 177);
+    text-transform: capitalize;
+}
+h2{
+    color: rgb(74, 145, 175);
+    text-align: justify;
+    text-transform: capitalize;
+    font-style: italic;
+
+}
+#tagline{
+    color:rgb(144, 161, 161);
+    font-family:cursive;
+    font-style:italic;
+    
+}
+.para1{
+    color: rgb(80, 162, 200);
+    font-style: italic;
+    font-size: 20px;
+}
+.class{
+    height: 10%;;
+    width: 10%;
+    background-color: blanchedalmond;
+}
+.feed{
+    height: 40%;
+    width: 30%;
+    border-radius: 100%;
+    background-color: aliceblue;
+}
+.circular{
+    background-color: aliceblue;
+    height: 30%;
+    width: 30%;
+}
+img:hover{
+    background-color: rgba(184, 225, 205, 0.873);
+}
+}
