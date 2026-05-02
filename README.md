@@ -107,7 +107,7 @@ Change one value and it updates everywhere on the site:
 | Styling | CSS3 — custom properties, grid, flexbox, `backdrop-filter`, keyframe animations |
 | Scripting | Vanilla JavaScript — IntersectionObserver, requestAnimationFrame |
 | Fonts | [Bricolage Grotesque](https://fonts.google.com/specimen/Bricolage+Grotesque) + [DM Sans](https://fonts.google.com/specimen/DM+Sans) via Google Fonts |
-| Hosting | GitHub Pages |
+| Hosting | GitHub Pages  |
 
 ---
 
