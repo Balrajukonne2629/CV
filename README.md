@@ -145,6 +145,7 @@ UI style inspired by **[21st.dev](https://21st.dev)** — dark editorial glassmo
 **Balraju Konne**
 B.Tech Information Technology — CBIT, Hyderabad (2024–2028)
 
+
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-balrajukonne-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/balrajukonne-319247348)
 [![GitHub](https://img.shields.io/badge/GitHub-Balrajukonne2629-black?style=flat&logo=github)](https://github.com/Balrajukonne2629)
 [![LeetCode](https://img.shields.io/badge/LeetCode-balrajukonne-orange?style=flat&logo=leetcode)](https://leetcode.com/u/balrajukonne)
